@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../leptop/css/cart.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">PrimeLaptops</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for Laptops">
+      <button>Search</button>
+    </div>
+    <nav>
+      <ul>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </header>
+
+  <div>
+    <h1>💳 Checkout</h1>
+  </div>
+  <br>
+
+  <section class="checkout">
+    <h2>Order Summary</h2>
+    <div class="order-list">
+      <ul>
+        <li>MacBook M4 – ₹1,24,899</li>
+        <li>ASUS ROG Strix SCAR 18 – ₹4,50,000</li>
+        <li>Macbook M4 pro – ₹1,89,900</li>
+        <li>ASUS Zenbook 14 – ₹89,900</li>
+      </ul>
+      <p><b>Total Amount: ₹8,54,699</b></p>
+    </div>
+
+    <form>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Address</label>
+      <textarea placeholder="Enter your address" required></textarea>
+
+      <label>Payment Method</label>
+      <select required>
+        <option value="">--Select Payment--</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="upi">UPI</option>
+        <option value="emi">EMI</option>
+      </select>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 <span>PrimeLaptops</span>. All rights reserved.</p>
+  </footer>
+</body>
+</html>
