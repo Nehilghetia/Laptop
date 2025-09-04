@@ -8,21 +8,26 @@
 </head>
 <body>
     <header>
-        <div class="logo">PrimeLaptops</div>
-        <div class="search-bar">
-            <input type="text" placeholder="search for Leptop">
-            <button type="submit">Search</button>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Products.html">Products</a>
-            <a href="cart.html">Cart</a>
-            <a href="checkout.html">Checkout</a>
-            <a href="Contact.html">Contact</a>
-            <a href="about.html">About</a>
-        </nav>
-             <div class="menu-toggle" id="menu-toggle">☰</div>
-    </header>
+    <div class="logo">PrimeLaptops</div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for Laptop" />
+      <button type="submit">Search</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="Products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="Contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <span class="menu-toggle" id="menuToggle">&#9776;</span>
+  </header>
 
     <section class="hero">
         <h1>Welcome to PrimeLaptops</h1>
@@ -123,5 +128,21 @@
     <footer>
         <p>&copy; 2025 LaptopStore. All rights reserved.</p>
     </footer>
+    <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+
+      // Toggle hamburger icon (☰ ↔ ✖)
+      if (menuToggle.innerHTML === "☰") {
+        menuToggle.innerHTML = "✖";
+      } else {
+        menuToggle.innerHTML = "☰";
+      }
+    });
+  </script>
+
 </body>
 </html>

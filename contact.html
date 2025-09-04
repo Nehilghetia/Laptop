@@ -13,15 +13,18 @@
       <input type="text" placeholder="Search for Laptop">
       <button type="submit">Search</button>
     </div>
-    <nav>
+   <!-- Navigation -->
+    <nav id="navMenu">
       <a href="index.html">Home</a>
       <a href="Products.html">Products</a>
       <a href="cart.html">Cart</a>
       <a href="checkout.html">Checkout</a>
-      <a href="Contact.html" class="active">Contact</a>
+      <a href="Contact.html">Contact</a>
       <a href="about.html">About</a>
     </nav>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Hamburger -->
+    <span class="menu-toggle" id="menuToggle">&#9776;</span>
   </header>
 
   <main class="contact">
@@ -36,11 +39,11 @@
       </div>
       <div class="card">
         <h2>Email</h2>
-        <p>📧 support@primelaptops.com</p>
+        <p>📧 nehilghetia5@gmail.com</p>
       </div>
       <div class="card">
         <h2>Phone</h2>
-        <p>📞 +91 98765 43210</p>
+        <p>📞 +91 9664961404</p>
       </div>
     </div>
 
@@ -59,5 +62,20 @@
   <footer>
     <p>&copy; 2025 PrimeLaptops. All rights reserved.</p>
   </footer>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+
+      // Toggle hamburger icon (☰ ↔ ✖)
+      if (menuToggle.innerHTML === "☰") {
+        menuToggle.innerHTML = "✖";
+      } else {
+        menuToggle.innerHTML = "☰";
+      }
+    });
+  </script>
 </body>
 </html>

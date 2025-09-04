@@ -14,7 +14,8 @@
       <input type="text" placeholder="search for Leptop" />
       <button type="submit">Search</button>
     </div>
-    <nav>
+    <!-- Navigation -->
+    <nav id="navMenu">
       <a href="index.html">Home</a>
       <a href="Products.html">Products</a>
       <a href="cart.html">Cart</a>
@@ -22,7 +23,9 @@
       <a href="Contact.html">Contact</a>
       <a href="about.html">About</a>
     </nav>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Hamburger -->
+    <span class="menu-toggle" id="menuToggle">&#9776;</span>
   </header>
 
   <!-- Product Section -->
@@ -71,5 +74,20 @@
   <footer>
     <p>&copy; 2025 LaptopStore. All rights reserved.</p>
   </footer>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+
+      // Toggle hamburger icon (☰ ↔ ✖)
+      if (menuToggle.innerHTML === "☰") {
+        menuToggle.innerHTML = "✖";
+      } else {
+        menuToggle.innerHTML = "☰";
+      }
+    });
+  </script>
 </body>
 </html>

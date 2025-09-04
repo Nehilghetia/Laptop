@@ -14,17 +14,18 @@
       <input type="text" placeholder="Search for Laptops">
       <button>Search</button>
     </div>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <nav>
-      <ul>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="cart.html">Cart</a>
-        <a href="checkout.html">Checkout</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-      </ul>
+    <!-- Navigation -->
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="Products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="Contact.html">Contact</a>
+      <a href="about.html">About</a>
     </nav>
+
+    <!-- Hamburger -->
+    <span class="menu-toggle" id="menuToggle">&#9776;</span>
   </header>
 
   <!-- Page Title -->
@@ -83,5 +84,20 @@
   <footer class="main-footer">
     <p>© 2025 <strong>PrimeLaptops</strong>. All rights reserved.</p>
   </footer>
+   <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+
+      // Toggle hamburger icon (☰ ↔ ✖)
+      if (menuToggle.innerHTML === "☰") {
+        menuToggle.innerHTML = "✖";
+      } else {
+        menuToggle.innerHTML = "☰";
+      }
+    });
+  </script>
 </body>
 </html>
