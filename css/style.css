@@ -404,6 +404,10 @@ footer {
     display: block;
   }
   .contact-info {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
 }
