@@ -380,6 +380,11 @@ footer {
     font-size: 1rem;
     color: #777;
 }
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
 /* Mobile view */
 @media (max-width: 768px) {
   nav {
